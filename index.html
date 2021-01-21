@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Aula 6 </title>
+</head>
+<style>
+    div#area{
+        background : blue;
+        color : white;
+        width : 200px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+    }
+    h1{
+        text-align: center;
+    }
+</style>
+
+<body>
+    <h1>Aula 06</h1>
+
+    <div id ="area"> 
+        Interaja...
+        
+    </div>
+    <script>
+        var a = window.document.getElementById('area');
+        var n = 0;
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+        
+        function clicar(){
+           a.innerText = 'clicou ' + n + ' x';
+           a.style.background = 'orange'
+           n++;
+
+        }
+        function entrar(){
+           a.innerText = 'Entrou!'
+        }
+        function sair(){
+           a.innerText = 'saiu!'
+           a.style.background = 'green'
+           n = 0;
+        }
+    </script>
+</body>
+
+</html>
